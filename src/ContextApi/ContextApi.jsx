@@ -7,7 +7,7 @@ export const AppProvider = ({ children }) => {
   const [products, setProducts] = useState([
     {
       id: 1,
-      name: "Demon Slayer Bumper Sticker",
+      name: "Demon Slayer  Sticker",
       price: 4,
       image:
         "https://www.stickitup.xyz/cdn/shop/files/2_bd7abcea-524d-43f3-a6c7-8bddc35b6af4.jpg?v=1687352574&width=493",
@@ -84,7 +84,7 @@ export const AppProvider = ({ children }) => {
       id: 6,
       image:
         "https://www.stickitup.xyz/cdn/shop/products/1_f553b060-c121-4cd8-9021-f451a552c548.jpg?v=1684984672&width=493",
-      name: "Change The World Sip By Sip",
+      name: "Change World Sip By Sip",
       price: 3,
       img1: "https://www.stickitup.xyz/cdn/shop/products/1_f553b060-c121-4cd8-9021-f451a552c548.jpg?v=1684984672&width=493",
       img2: "https://www.stickitup.xyz/cdn/shop/products/3_e2044867-44d0-41a2-9cad-af60e3326080.jpg?v=1684984677&width=493",
