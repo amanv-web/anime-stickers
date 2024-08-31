@@ -9,7 +9,7 @@ function Home() {
           >
             Get Anime stickers  <span className="pl-2 text-primary">  NOW!   </span>
           </h1>
-          <p className="flex justify-center m-2 text-primary">
+          <p className="flex justify-center text-center m-2 text-primary p-4">
           Anime dreams, now at your fingertips! Stick, share, and let the fandom eclipse!"
           </p>
         </div>

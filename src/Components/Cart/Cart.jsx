@@ -1,36 +1,48 @@
-import React, { useContext } from "react";
+import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import { AppContext } from "../../ContextApi/ContextApi";
+import { useSelector ,useDispatch } from "react-redux";
+import { remove } from "../Redux/slice/addcart";
+
 function Cart() {
-  const { products } = useContext(AppContext);
+  const  products  = useSelector(state => state.cart);
+  const dispatch = useDispatch()
   return (
     <div>
       <div className="flex justify-center mt-10">
-        <h1 className="text-4xl font-bold">Your cart</h1>
+        <h1 className="text-4xl font-bold p-4">Your cart</h1>
       </div>
       {/* items */}
-      {products && products.items ? (
-        products.items.map((item) => (
+      {products.length > 0 ? (
+        products.map((product) => (
           <table className="flex justify-center gap-48 mt-8 ">
             <tbody className="flex">
-            <td><img className="w-20" src={products.image} alt={products.name} />{" "}</td>
-              <td> {products.name} </td>
+              <td>
+                <img className="w-20" src={product.image} alt={product.name} />
+              </td>
+              <td> {product.name} </td>
             </tbody>
             <tbody className="flex gap-16 ">
-              <input type="number" className="w-20 h-10" />
-              <td>${products.price}</td>
-              <CloseIcon />
+              <input type="number" className="w-20 h-16" />
+              <td>${product.price}</td>
+              <button onClick={() => {dispatch(remove(product.id))}}>
+                <CloseIcon />
+              </button>
             </tbody>
           </table>
         ))
       ) : (
-        <div className="flex justify-center pt-10  pb-10">
-          <img
-            src="https://skoozo.com/assets/img/empty-cart.png"
-            alt=""
-            srcset=""
-          />
+       
+     <>
+      <div className=" flex justify-center p-4">
+
+<img className="w-96 " src="https://www.fudcoshop.com/pub/static/frontend/MageBig/martfury_layout04/en_GB/images/empty-cart.svg" alt="" />
+
+
         </div>
+     <div>
+     <h1 className="text-2xl p-10 text-center font-bold">No Sticker is your cart</h1>
+     </div>
+     </>
       )}
     </div>
   );

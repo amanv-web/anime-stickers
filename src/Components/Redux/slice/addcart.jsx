@@ -1,17 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit'
-
+ 
 
 
 export const addcart = createSlice({
   
-  initialState : 0,
-  name: 'addcart',
+  initialState: [] ,
+  name: 'cart',
   reducers: {
-   increment: (state) => state + 1,
-  decrement: (state) =>  state + 1,
+add(state, action){
+  state.push(action.payload);
+},
 
+remove(state, action){
+  return state.filter((item) => item.id !==action.payload)
+
+}
   }})
 // Action creators are generated for each case reducer function
-export const { increment, decrement } = addcart.actions
+export const { add, remove } = addcart.actions
 
-export default addcart.reducer
+export default addcart.reducer;
