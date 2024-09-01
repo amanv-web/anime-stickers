@@ -20,7 +20,7 @@ const item = useSelector((state) => state.cart)
             <i className="fa-solid fa-house m-6 text-primary-quaternary "></i>
           </NavLink>
           <NavLink to="/Cart" className={`content-center`}> 
-          <p className="absolute  ml-5 -mt-4 shadow-xl text-1xl font-bold text-white"> {item.length} </p>
+          <p className="absolute  ml-5 -mt-4 shadow-xl text-1xl text-pretty text-white"> {item.length} </p>
             <i className="fa-solid fa-cart-shopping text-1xl text-primary-quaternary "> </i>
           </NavLink>
         </Link>
