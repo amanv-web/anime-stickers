@@ -21,7 +21,7 @@ function ProductDetail() {
   }, [size, quantity]); 
   return (
     <>
-      <div className="flex justify-center flex-wrap gap-10 pt-20 pb-20  bg-primary-quaternary">
+      <div className="flex justify-center flex-wrap gap-10 pt-16 pb-20  bg-primary-quaternary">
         <div>
           <Images />
         </div>

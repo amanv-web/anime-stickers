@@ -3,25 +3,25 @@ import { useSelector } from "react-redux";
 function nav() {
 const item = useSelector((state) => state.cart)
   return (
-    <div className="bg-primary flex items-center justify-around gap-20">
+    <div  data-aos="fade-in" className="bg-primary flex items-center sticky top-0 justify-around gap-20 	z-50">
       <div className=" flex items-center ">
         <img
-          className="w-20 bg-blend-color-burn"
-          src="https://clipart-library.com/images_k/anime-gif-transparent-background/anime-gif-transparent-background-2.png"
+          className="w-10 bg-transparent mr-4"
+          src="https://static.vecteezy.com/system/resources/thumbnails/027/388/505/small/black-kitsune-fox-with-red-circle-anime-japanese-style-png.png"
           alt="sdf"
         />
-        <h1 className=" font-extrabold text-primary-quaternary sm:text-4xl text-2xl">
+        <h1 className=" font-extrabold text-primary-quaternary sm:text-2xl text-1xl">
           Anime Nexus
         </h1>
       </div>
       <div  >
         <Link className="flex ">
           <NavLink to="/" className={`content-center`}>
-            <i className="fa-solid fa-house text-xl m-6 text-primary-quaternary "></i>
+            <i className="fa-solid fa-house m-6 text-primary-quaternary "></i>
           </NavLink>
           <NavLink to="/Cart" className={`content-center`}> 
-          <p className="absolute  ml-5 -mt-4 shadow-xl text-xl font-bold text-white"> {item.length} </p>
-            <i className="fa-solid fa-cart-shopping text-xl text-primary-quaternary "> </i>
+          <p className="absolute  ml-5 -mt-4 shadow-xl text-1xl font-bold text-white"> {item.length} </p>
+            <i className="fa-solid fa-cart-shopping text-1xl text-primary-quaternary "> </i>
           </NavLink>
         </Link>
       </div>

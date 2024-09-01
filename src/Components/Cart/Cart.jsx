@@ -7,7 +7,7 @@ function Cart() {
   const  products  = useSelector(state => state.cart);
   const dispatch = useDispatch()
   return (
-    <div>
+    <div className="h-screen">
       <div className="flex justify-center mt-10">
         <h1 className="text-4xl font-bold p-4">Your cart</h1>
       </div>
@@ -35,7 +35,7 @@ function Cart() {
      <>
       <div className=" flex justify-center p-4">
 
-<img className="w-96 " src="https://www.fudcoshop.com/pub/static/frontend/MageBig/martfury_layout04/en_GB/images/empty-cart.svg" alt="" />
+<img className="w-96 bg-transparent" src="https://www.vhv.rs/dpng/d/521-5212497_empty-cart-hd-png-download.png" alt="" />
 
 
         </div>

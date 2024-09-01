@@ -9,15 +9,15 @@ function ItemCard() {
   const { products, setItems } = useContext(AppContext);
 
   return (
-    <div className="flex flex-wrap justify-center p-20 gap-20">
+    <div  className="flex flex-wrap justify-center p-20 gap-20  ">
       {products.map((data) => (
         <NavLink to={`/ProductDetail/${data.id}`} key={data.id}>
-          <div className="">
-            <div className="">
-              <Card className="max-w-sm flex flex-col bg-white p-4 shadow-md w-72">
+          <div >
+            <div data-aos="fade-up" data-aos-duration="1000" >
+              <Card className="max-w-sm flex flex-col bg-white p-4 shadow-md w-72  ">
                 <img
                   src={data.image}
-                  className="hover:scale-105 hover:ease-in duration-300"
+                  className="hover:scale-105 hover:ease-outn duration-300  "
                 />
                 <NavLink href="#">
                   <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
