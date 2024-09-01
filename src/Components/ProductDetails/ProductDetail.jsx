@@ -3,7 +3,7 @@ import { Link, NavLink, useParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { AppContext } from "../../ContextApi/ContextApi";
 import { useState } from "react";
-import { useDispatch, } from 'react-redux'
+import { useDispatch } from "react-redux";
 import { add } from "../Redux/slice/addcart";
 function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
@@ -18,7 +18,7 @@ function ProductDetail() {
   useEffect(() => {
     const value = (originalPrice + parseInt(size)) * quantity;
     setUpdatedValue(value);
-  }, [size, quantity]); 
+  }, [size, quantity]);
   return (
     <>
       <div className="flex justify-center flex-wrap gap-10 pt-16 pb-20  bg-primary-quaternary">
@@ -50,17 +50,17 @@ function ProductDetail() {
                 className="  p-2 w-28 pl-10  "
                 defaultValue={1}
                 min={1}
-                onChange={(e) => setQuantity(e.target.value  )}
+                onChange={(e) => setQuantity(e.target.value)}
               />
             </div>
-            <div  >
+            <div>
               <label htmlFor="size" className="block  ">
                 Select Size
               </label>
               <select
                 name="Select Size"
                 className="p-2 pl-10  pr-10 w-full "
-                onChange={(e) => setSize(e.target.value  )}
+                onChange={(e) => setSize(e.target.value)}
               >
                 <option value="0">4 x 4</option>
                 <option value="3">5 x 5</option>
@@ -68,18 +68,27 @@ function ProductDetail() {
               </select>
             </div>
           </div>
-          <Link>
+          <div >
+            <Link className="gap-2 ">
             <NavLink to="#">
-              <button 
-                 onClick={()=> {
+              <button
+                onClick={() => {
                   dispatch(add(product));
-                                      }}
-                                       className=" m-auto w-full  bg-cyan-700 px-5 py-2.5 text-center -medium text-white hover:bg-cyan-800  dark:hover:bg-cyan-700 text-xl  ">
+                }}
+                className=" m-auto w-6/12  bg-cyan-700 px-5 py-2.5 text-center -medium text-white hover:bg-cyan-800  dark:hover:bg-cyan-700 text-lg mr- "
+              >
                 Add to cart
-                <i className="fa-solid fa-cart-shopping  text-xl ml-2"></i>
+                <i className="fa-solid fa-cart-shopping  text-lg ml-2"></i>
+              </button>
+            </NavLink>
+            <NavLink to="/Cart">
+              <button className=" m-auto  border-2 border-primary p-2 ml-6 mb-4 hover:bg-primary hover:text-primary-quaternary  text-lg w-5/12 ">
+                Go to cart
+                <i className="fa-solid fa-cart-shopping  text-lg ml-2"></i>
               </button>
             </NavLink>
           </Link>
+          </div>
         </div>
       </div>
     </>

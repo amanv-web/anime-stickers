@@ -17,10 +17,10 @@ function ItemCard() {
               <Card className="max-w-sm flex flex-col bg-white p-4 shadow-md w-72  ">
                 <img
                   src={data.image}
-                  className="hover:scale-105 hover:ease-outn duration-300  "
+                  className="hover:scale-105 hover:ease-out duration-300  "
                 />
                 <NavLink href="#">
-                  <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                  <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white p-2">
                     {data.name}
                   </h5>
                 </NavLink>

@@ -37,7 +37,8 @@ function Cart() {
                     <span>{product.name}</span>
                   </td>
                   <td className="p-4">
-                    <input type="number" className="w-20 p-2 border" defaultValue={1} />
+                    <input type="number" className="w-20 p-2 border"  defaultValue={1}
+                min={1}  value={product.quantity}/>
                   </td>
                   <td className="p-4">${product.price}</td>
                   <td className="p-4">
@@ -54,7 +55,7 @@ function Cart() {
         <>
           <div className="flex justify-center p-4">
             <img
-              className="w-96 bg-transparent"
+              className="w-60 bg-transparent"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2s62V8eghzbVZzEAtMBjtPSFX3wYmnOE5kg&s"
               alt="Empty cart"
             />
