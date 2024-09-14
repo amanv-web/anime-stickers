@@ -8,14 +8,15 @@ function Cart() {
   const dispatch = useDispatch();
 
   return (
-    <div className="h-screen">
+    <>
+       <div className="h-screen">
       <div className="flex justify-center mt-10">
         <h1 className="text-4xl font-bold p-4">Your Cart</h1>
       </div>
       
       {/* Items Table */}
       {products.length > 0 ? (
-        <div className="overflow-x-auto flex justify-center ">
+        <div className="overflow-hidden flex justify-center ">
           <table className="w-3/4 border-collapse bg-white">
             <thead>
               <tr className="text-left border-b">
@@ -37,7 +38,7 @@ function Cart() {
                     <span>{product.name}</span>
                   </td>
                   <td className="p-4">
-                    <input type="number" className="w-20 p-2 border"  defaultValue={1}
+                    <input type="number" className="w-20 p-2 border text-center" disabled defaultValue={1}
                 min={1}  value={product.quantity}/>
                   </td>
                   <td className="p-4">${product.price}</td>
@@ -65,7 +66,26 @@ function Cart() {
           </div>
         </>
       )}
+
     </div>
+   
+    <div className="w-full bg-primary sticky bottom-0 h-20">
+      <div className=" p-4">
+        <h1 className="text-xl text-white">Total</h1>
+        <h1 className="text-2xl text-white">
+          ${products.reduce((acc, product) => acc + product.price, 0)}
+        </h1>
+      </div>
+      <div>
+        Order Place
+      </div>
+
+    </div>
+    
+   
+    
+    </>
+ 
   );
 }
 

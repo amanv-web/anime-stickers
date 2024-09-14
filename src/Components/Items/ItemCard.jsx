@@ -20,7 +20,7 @@ function ItemCard() {
                   className="hover:scale-105 hover:ease-out duration-300  "
                 />
                 <NavLink href="#">
-                  <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white p-2">
+                  <h5 className="text-xl font-semibold tracking-tight text-gray-900 p-2">
                     {data.name}
                   </h5>
                 </NavLink>
@@ -42,7 +42,7 @@ function ItemCard() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                  <span className="text-3xl font-bold text-gray-900 ">
                   ${data.price}
                   </span>
                   <button

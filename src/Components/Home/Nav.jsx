@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 function nav() {
 const item = useSelector((state) => state.cart)
   return (
-    <div  data-aos="fade-in" className="bg-primary flex items-center sticky top-0 justify-around gap-20 	z-50">
+    <div   className="bg-primary flex items-center sticky top-0 justify-around gap-20 	z-50">
       <div className=" flex items-center ">
         <img
           className="w-10 bg-transparent mr-4"
